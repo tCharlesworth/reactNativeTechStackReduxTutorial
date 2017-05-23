@@ -3,6 +3,8 @@ import { ListView } from 'react-native';
 
 import { connect } from 'react-redux';
 
+import ListItem from './ListItem';
+
 class LibraryList extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,8 @@ class LibraryList extends Component {
 
          this.dataSource = ds.cloneWithRows(this.props.libraries);
     }
-    renderRow() {
+    renderRow(library) {
+        return <ListItem library={library} />
     }
     render() {
         return (
