@@ -15,7 +15,7 @@ const App = () => {
                 <Header headerText="Tech Stack" />
             </View>
         </Provider>
-    )
-}
+    );
+};
 
 export default App;
