@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, TouchableWithoutFeedback, LayoutAnimation } from 'react-native';
 import { CardItem } from './common';
 
 import { connect } from 'react-redux';
@@ -15,6 +15,9 @@ class ListItem extends Component {
                 </CardItem>
             );
         }
+    }
+    componentWillUpdate() {
+        LayoutAnimation.spring();
     }
     render() {
         const { titleStyle } = styles;
